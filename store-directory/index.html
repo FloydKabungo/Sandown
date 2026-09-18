@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Search the complete Sandown Retail Crossing store directory by name, category or shop number.">
+    <meta name="theme-color" content="#252d32">
+    <title>Store Directory | Sandown Retail Crossing</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script defer src="../assets/stores.js"></script>
+    <script defer src="../assets/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div data-site-header></div>
+
+    <main id="main">
+      <section class="page-hero" style="--hero-image:url('../assets/centre-interior-2.webp');--hero-position:center 48%;" aria-labelledby="page-title">
+        <div class="page-hero__inner">
+          <p class="eyebrow">Shop · Dine · Connect</p>
+          <h1 id="page-title">Store directory</h1>
+          <p>Search more than 50 stores, restaurants and services, then check the shop number on the official floor plan.</p>
+        </div>
+      </section>
+
+      <section class="directory-shell shell" data-store-directory aria-labelledby="directory-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Find a store</p>
+            <h2 id="directory-title">What are you looking for?</h2>
+          </div>
+          <a class="text-link" href="/floor-plan/">View floor plan <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="directory-tools">
+          <label class="search-field">
+            <span class="sr-only">Search stores</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+            <input type="search" inputmode="search" autocomplete="off" placeholder="Search by store, category or shop number…" data-store-search>
+          </label>
+          <div class="filter-row" aria-label="Store categories">
+            <button class="filter-chip" type="button" data-store-category="All" aria-pressed="true">All</button>
+            <button class="filter-chip" type="button" data-store-category="Food &amp; Retail" aria-pressed="false">Food &amp; Retail</button>
+            <button class="filter-chip" type="button" data-store-category="Health &amp; Beauty" aria-pressed="false">Health &amp; Beauty</button>
+            <button class="filter-chip" type="button" data-store-category="Home &amp; Fashion" aria-pressed="false">Home &amp; Fashion</button>
+            <button class="filter-chip" type="button" data-store-category="Restaurants" aria-pressed="false">Restaurants</button>
+            <button class="filter-chip" type="button" data-store-category="Speciality" aria-pressed="false">Speciality</button>
+            <button class="filter-chip" type="button" data-store-category="Services" aria-pressed="false">Services</button>
+          </div>
+        </div>
+
+        <div class="results-summary" aria-live="polite">
+          <p data-store-count>Loading stores…</p>
+          <p>Store details may change. Contact individual stores for their trading hours.</p>
+        </div>
+
+        <div class="store-grid" data-store-grid></div>
+        <div class="empty-state" data-store-empty hidden>
+          <h2>No stores found</h2>
+          <p>Try a different name, category or shop number.</p>
+        </div>
+        <noscript>
+          <div class="empty-state">
+            <h2>JavaScript is needed for directory search</h2>
+            <p>You can still use the official floor plan or contact centre management for help finding a store.</p>
+          </div>
+        </noscript>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+  </body>
+</html>

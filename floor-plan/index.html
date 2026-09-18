@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="View and search the official Sandown Retail Crossing floor plan to find stores, restaurants and services.">
+    <meta name="theme-color" content="#252d32">
+    <title>Floor Plan | Sandown Retail Crossing</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="../assets/sandown-floorplan.webp" as="image">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script defer src="../assets/stores.js"></script>
+    <script defer src="../assets/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div data-site-header></div>
+
+    <main id="main">
+      <section class="page-hero" style="--hero-image:url('../assets/centre-hero.webp');--hero-position:center 58%;" aria-labelledby="page-title">
+        <div class="page-hero__inner">
+          <p class="eyebrow">Find your way</p>
+          <h1 id="page-title">Floor plan</h1>
+          <p>Search for a store by name or shop number, then use the official centre plan to locate it before you arrive.</p>
+        </div>
+      </section>
+
+      <section class="section section--mist" aria-labelledby="plan-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Official centre plan</p>
+              <h2 id="plan-title">Sandown Retail Crossing at a glance</h2>
+            </div>
+            <div class="button-row">
+              <button class="button button--outline" type="button" data-plan-open>Open full screen</button>
+              <a class="button" href="../assets/Sandown-Floorplan-Mar-2026.pdf" download>Download PDF <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+
+          <div class="floor-plan-layout">
+            <div class="plan-panel reveal">
+              <div class="plan-toolbar">
+                <p style="margin:0;color:var(--ink-soft);font-size:.9rem;">Use the controls to zoom, then scroll around the plan.</p>
+                <div class="zoom-controls" aria-label="Floor plan zoom controls">
+                  <button class="icon-button" type="button" data-zoom-out aria-label="Zoom out">−</button>
+                  <span class="zoom-value" data-zoom-value aria-live="polite">100%</span>
+                  <button class="icon-button" type="button" data-zoom-in aria-label="Zoom in">+</button>
+                  <button class="icon-button" type="button" data-zoom-reset aria-label="Reset zoom">↺</button>
+                </div>
+              </div>
+              <div class="plan-viewport" data-plan-viewport tabindex="0" aria-label="Scrollable floor plan">
+                <img src="../assets/sandown-floorplan.webp" width="2314" height="1637" alt="Official Sandown Retail Crossing floor plan showing store numbers, parking, Sandown Road and Wood Drive" data-plan-image>
+              </div>
+            </div>
+
+            <aside class="plan-directory reveal" aria-labelledby="plan-search-title">
+              <div class="plan-directory__head">
+                <h2 id="plan-search-title">Find a store</h2>
+                <label class="search-field">
+                  <span class="sr-only">Search the floor plan directory</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+                  <input type="search" inputmode="search" autocomplete="off" placeholder="Name or shop number…" data-plan-search>
+                </label>
+                <div class="plan-directory__meta">
+                  <p data-plan-count>Loading stores…</p>
+                  <a class="text-link" href="/store-directory/">Full directory</a>
+                </div>
+              </div>
+              <ul class="plan-store-list" data-plan-store-list></ul>
+            </aside>
+          </div>
+
+          <p class="plan-note">Floor plan dated March 2026. Store details and positions may change; contact centre management if you need assistance.</p>
+        </div>
+      </section>
+
+      <dialog class="plan-dialog" data-plan-dialog aria-labelledby="dialog-title">
+        <div class="plan-dialog__bar">
+          <strong id="dialog-title">Sandown Retail Crossing floor plan</strong>
+          <button class="icon-button" type="button" data-plan-close aria-label="Close full-screen floor plan">×</button>
+        </div>
+        <div class="plan-dialog__body">
+          <img src="../assets/sandown-floorplan.webp" width="2314" height="1637" alt="Official Sandown Retail Crossing floor plan">
+        </div>
+      </dialog>
+    </main>
+
+    <div data-site-footer></div>
+  </body>
+</html>
